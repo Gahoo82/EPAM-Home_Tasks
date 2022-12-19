@@ -78,7 +78,7 @@ INTERFACESv4="enp0s8 enp0s9"
 sudo nano /etc/dhcp/dhcpd.conf
 ```
 <p align="center">
-  <img src="[https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/isc_dhcp_server.png](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/dhcp.conf.png)">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/dhcp.conf.png">
 </p>
 
 
