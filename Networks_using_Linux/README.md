@@ -42,3 +42,12 @@ __Client_1 та Client_2__ \
  - Net2: 10.82.29.0/24  
  - Net3: 10.10.82.0/24
  - Net4: 172.16.29.0/24
+
+
+
+| Virtual_Machine | Interface | Net | IP-address(static) | DHCP_range |
+|:-------------   |:----------|:----|:-------------------|:-----      |
+|Server1(Ubuntu_Server)|Int1-enp0s3<br>Int2-enp0s8<br>Int3-enp0s9|192.168.0.0<br>10.82.29.0<br>10.10.82.0|192.168.0.100<br>10.82.29.1<br>10.10.82.1|   |
+|Client1(Ubuntu)|Int1-enp0s3<br>Int2-enp0s8|10.82.29.0<br>172.16.29.0|-<br>172.16.29.1 |10.82.29.50-150<br>-|
+|Client2(CentOS)|Int1-enp0s3<br>Int2-enp0s8|10.10.82.0<br>172.16.29.0|-<br>172.16.29.2 |10.20.82.100-200<br>-|
+
