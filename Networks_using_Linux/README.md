@@ -48,9 +48,29 @@ __Client_1 та Client_2__ \
 </p>
 
 #### 1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.
+Приховуємо файл дефолтних налаштувань шляхом зміни назви та створюємо новий файл налаштувань
+```console
+kostia@Server1:/etc/netplan$ ls -l
+total 8
+-rw-r--r-- 1 root root 117 Dec  6 17:57 00-installer-config.yaml.org
+-rw-r--r-- 1 root root 432 Dec 19 21:37 server1-config.yaml
+kostia@Server1:/etc/netplan$ sudo nano server1-config.yaml
+```
+Конфігуруємо файл мережевих налаштувань "server1-config.yaml"
 
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/1_Static_IP_all_interfaces_netplan.png">
+</p>
+
+#### 2. На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1, Client_1 та Client_2
+Налаштовуємо файл "isc-dhcp-server"
+```console
+sudo nano /etc/default/isc-dhcp-server
+
+INTERFACESv4="enp0s8 enp0s9"
+```
+<p align="center">
+  <img src="">
 </p>
 
 
