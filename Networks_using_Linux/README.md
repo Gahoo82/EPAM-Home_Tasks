@@ -50,7 +50,7 @@ __Client_1 та Client_2__ \
 #### 1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/1_Static_IP_all_interfaces_netplan.png">
 </p>
 
 
