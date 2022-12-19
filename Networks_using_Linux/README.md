@@ -42,6 +42,11 @@ __Client_1 та Client_2__ \
  - Net2: 10.82.29.0/24  
  - Net3: 10.10.82.0/24
  - Net4: 172.16.29.0/24
+ 
+ <p align="center">
+  <img src=" https://github.com/Gahoo82/EPAM-Home_Tasks/blob/network_linux/Networks_using_Linux/Docs/Table%20network.png">
+</p>
+
 
 
 
