@@ -81,7 +81,7 @@ sudo nano /etc/dhcp/dhcpd.conf
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/dhcp.conf.png">
 </p>
 
-Перезавантажуємо DHCP-server та systemd-networkd (systemd-networkd також в подальшому для Client1/Client2)
+Перезавантажуємо DHCP-server та systemd-networkd (systemd-networkd також в подальшому для Client1/Client2), перевіряємо IP-адресу
 ```console
 sudo service isc-dhcp-server restart
 # OR
@@ -90,14 +90,13 @@ sudo systemctl restart isc-dhcp-server.service
 ```console
 sudo systemctl status isc-dhcp-server
 ```
-Restart systemd networkd for Server_1, Client_1, Client_2 and check IP:
 ```console
 sudo systemctl restart systemd-networkd
 ip addr 
 ```
-
-
-
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Server1_IP_addr.png">
+</p>
 Налаштовуємо мережеві інтерфейси на Client1
 
 
