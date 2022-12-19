@@ -70,7 +70,7 @@ sudo nano /etc/default/isc-dhcp-server
 INTERFACESv4="enp0s8 enp0s9"
 ```
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/isc_dhcp_server.png">
 </p>
 
 
