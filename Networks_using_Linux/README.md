@@ -126,4 +126,5 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client2_ip_addr.png">
 </p>
 
+3. За допомогою команд ping та traceroute перевірити зв'язок між віртуальними машинами.
 
