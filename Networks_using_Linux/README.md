@@ -126,9 +126,14 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client2_ip_addr.png">
 </p>
 
-3. За допомогою команд ping та traceroute перевірити зв'язок між віртуальними машинами.
+3. За допомогою команд ping та traceroute перевіряємо зв'язок між віртуальними машинами. 
+Налаштовуємо статичну маршрутизацію на роутері для мереж Net2 та Net3. 
 
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/4_ping_traceroute.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Traceroute_8888.png">
 </p>
 
