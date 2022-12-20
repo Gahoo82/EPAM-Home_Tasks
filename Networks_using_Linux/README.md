@@ -128,3 +128,7 @@ sudo systemctl restart network
 
 3. За допомогою команд ping та traceroute перевірити зв'язок між віртуальними машинами.
 
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/4_ping_traceroute.png">
+</p>
+
