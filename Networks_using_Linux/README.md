@@ -97,6 +97,14 @@ ip addr
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Server1_IP_addr.png">
 </p>
-Налаштовуємо мережеві інтерфейси на Client1
+
+#### Налаштовуємо мережеві інтерфейси на Client1
+Конфігуруємо файл мережевих налаштувань у папці Netplan. 
+Int1-enp0s3 налаштовуємо на отримання IP-адреси від DHCP-серверу Server1.
+На Int2-enp0s8 налаштовуємо статичну IP-адресу(172.16.29.1) відповідно до мережі 172.16.29.0
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client1_netplan1.png">
+</p>
 
 
