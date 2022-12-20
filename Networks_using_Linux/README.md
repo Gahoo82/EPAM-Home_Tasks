@@ -107,4 +107,10 @@ Int1-enp0s3 налаштовуємо на отримання IP-адреси в�
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client1_netplan1.png">
 </p>
 
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client1_IP_addr.png">
+</p>
+
+
+
 
