@@ -111,6 +111,15 @@ Int1-enp0s3 налаштовуємо на отримання IP-адреси в�
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client1_IP_addr.png">
 </p>
 
+#### Налаштовуємо мережеві інтерфейси на Client2.
+Редагуємо конфігураційні файли "ifcfg-enp0s3" та "ifcfg-enp0s8" для відповідних інтерфейсів. Так щоб enp0s3 отримував IP-адресу від DHCP-серверу Server1. А на enp0s8 налаштовуємо статичну адресу 172.16.29.2 
+Після цього перезапускаємо network
 
+```console
+sudo systemctl restart network
+```
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client2_dhcp%26static_ip.png">
+</p>
 
 
