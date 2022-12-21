@@ -188,3 +188,9 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Summary_IP_addr.png">
 </p>
+
+Налаштовуємо маршрутизацію на Server1 та Client1. Та перевіряємо проходження трафіку за допомогою Traceroute
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/rezult_summary_ip_traceroute.png">
+</p>
