@@ -163,4 +163,14 @@ network:
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/lo_interface.png">
 </p>
 
+Додаємо правила для транзиту пакетів на Server1
+```console
+sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -j ACCEPT
+sudo iptables -A FORWARD -i enp0s9 -o enp0s8 -j ACCEPT
+
+# Save current rules:
+sudo iptables-save
+
+sudo sh -c "iptables-save > /etc/iptables/rules.v4"
+```
 
