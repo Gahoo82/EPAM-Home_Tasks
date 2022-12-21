@@ -145,7 +145,6 @@ sudo systemctl restart network
 
 Для тимчасового налаштування адрес на lo інтерфейсі можемо використати команди:
 ```console
-# TEST
 sudo ip address add 172.17.39.1/24 dev lo
 sudo ip address add 172.17.49.1/24 dev lo
 ```
