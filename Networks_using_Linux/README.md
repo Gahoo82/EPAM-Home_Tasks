@@ -159,6 +159,8 @@ network:
 ```
 Конфігуруємо маршрутизацію для Client1, Server1, Client2
 
-
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/lo_interface.png">
+</p>
 
 
