@@ -176,3 +176,9 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/IP_table_Server_for_lo.png">
 </p>
+
+Перевіряємо проходження трафіку з Client2 до Client1 на адреси інтерфейсу lo 
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/lo_traceroute.png">
+</p>
