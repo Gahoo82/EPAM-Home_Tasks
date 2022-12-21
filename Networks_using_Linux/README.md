@@ -137,3 +137,27 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Traceroute_8888.png">
 </p>
 
+#### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute. 
+
+Таким чином маємо такі адреси: 
+172.17.39.1/24
+172.17.49.1/24
+
+Для тимчасового налаштування адрес на lo інтерфейсі можемо використати команди:
+```console
+# TEST
+sudo ip address add 172.17.39.1/24 dev lo
+sudo ip address add 172.17.49.1/24 dev lo
+```
+Для Netplan:
+'''console
+network:
+    version: 2
+    renderer: networkd
+    ethernets:
+        lo:
+            addresses: [172.17.39.1/24, 172.17.49.1/24]
+```
+
+
+
