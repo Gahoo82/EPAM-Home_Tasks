@@ -150,7 +150,7 @@ sudo ip address add 172.17.39.1/24 dev lo
 sudo ip address add 172.17.49.1/24 dev lo
 ```
 Для Netplan:
-'''console
+```console
 network:
     version: 2
     renderer: networkd
