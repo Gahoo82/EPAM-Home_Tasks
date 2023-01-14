@@ -82,3 +82,34 @@ mysql> CREATE TABLE Buses (
     -> Route_ID int NOT NULL);
 Query OK, 0 rows affected (0,05 sec)
 
+mysql> SHOW COLUMNS FROM Buses;
++----------+------+------+-----+---------+-------+
+| Field    | Type | Null | Key | Default | Extra |
++----------+------+------+-----+---------+-------+
+| Bus_ID   | int  | NO   |     | NULL    |       |
+| Route_ID | int  | NO   |     | NULL    |       |
++----------+------+------+-----+---------+-------+
+
+mysql> CREATE TABLE Routes (
+    -> Route_ID int NOT NULL,
+    -> Distance float(2,2) NOT NULL,
+    -> Time_interval int NOT NULL,
+    -> Begin_of_work time NOT NULL,
+    -> End_of_work time NOT NULL;
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> SHOW COLUMNS FROM Routes;
++---------------+------------+------+-----+---------+-------+
+| Field         | Type       | Null | Key | Default | Extra |
++---------------+------------+------+-----+---------+-------+
+| Route_ID      | int        | NO   |     | NULL    |       |
+| Distance      | float(2,2) | NO   |     | NULL    |       |
+| Time_interval | int        | NO   |     | NULL    |       |
+| Begin_of_work | time       | NO   |     | NULL    |       |
+| End_of_work   | time       | NO   |     | NULL    |       |
++---------------+------------+------+-----+---------+-------+
+
+
+
+
+
