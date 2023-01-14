@@ -95,7 +95,7 @@ mysql> CREATE TABLE Routes (
     -> Distance float(2,2) NOT NULL,
     -> Time_interval int NOT NULL,
     -> Begin_of_work time NOT NULL,
-    -> End_of_work time NOT NULL;
+    -> End_of_work time NOT NULL);
 Query OK, 0 rows affected (0,04 sec)
 
 mysql> SHOW COLUMNS FROM Routes;
@@ -108,6 +108,50 @@ mysql> SHOW COLUMNS FROM Routes;
 | Begin_of_work | time       | NO   |     | NULL    |       |
 | End_of_work   | time       | NO   |     | NULL    |       |
 +---------------+------------+------+-----+---------+-------+
+
+mysql> CREATE TABLE Drivers (
+    -> Driver_ID int NOT NULL,
+    -> Last_name char (20) NOT NULL,
+    -> First_name char (20) NOT NULL);
+Query OK, 0 rows affected (0,05 sec)
+
+mysql> SHOW COLUMNS FROM Drivers;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| Driver_ID  | int      | NO   |     | NULL    |       |
+| Last_name  | char(20) | NO   |     | NULL    |       |
+| First_name | char(20) | NO   |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+
+mysql> CREATE TABLE Shedule (
+    -> Bus_ID int NOT NULL,
+    -> Driver_ID int NOT NULL,
+    -> Date_of_work date NOT NULL);
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> SHOW COLUMNS FROM Shedule;
++--------------+------+------+-----+---------+-------+
+| Field        | Type | Null | Key | Default | Extra |
++--------------+------+------+-----+---------+-------+
+| Bus_ID       | int  | NO   |     | NULL    |       |
+| Driver_ID    | int  | NO   |     | NULL    |       |
+| Date_of_work | date | NO   |     | NULL    |       |
++--------------+------+------+-----+---------+-------+
+
+mysql> SHOW TABLES;
++---------------------+
+| Tables_in_busDEPOdb |
++---------------------+
+| Buses               |
+| Drivers             |
+| Routes              |
+| Shedule             |
++---------------------+
+
+
+
+
 
 
 
