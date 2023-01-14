@@ -16,11 +16,9 @@
 # ===============================================================================
 
 # 1. Download MySQL server for your OS on VM. 
-```console
 sudo apt update
 sudo apt list --upgradable # get a list of upgrades
 sudo apt upgrade
-```
 # ===============================================================================
 
 
@@ -54,3 +52,17 @@ STATUS;
   #We can see MySQL version as follows:
 SHOW VARIABLES LIKE "%version%";
 # ===============================================================================
+
+mysql> show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| busDEPOdb          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+
+5 rows in set (0,00 sec)
