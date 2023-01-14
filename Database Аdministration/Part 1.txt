@@ -38,8 +38,8 @@ sudo systemctl is-enabled mysql.service
 sudo systemctl enable mysql.service
 
   # Verify MySQL 8 server status on Ubuntu Linux 20.04 LTS by typing the following systemctl command:
-sudo systemctl status mysql.service
-
+sudo systemctl status mysql.
+service
   # Starting/Stopping/Restarting the MySQL server
 sudo systemctl start mysql.service
 sudo systemctl stop mysql.service
@@ -53,6 +53,11 @@ STATUS;
 SHOW VARIABLES LIKE "%version%";
 # ===============================================================================
 
+# 3. Select a subject area and describe the database schema, (minimum 3 tables)
+  #Login into MySQL 8 server for testing purpose
+mysql -u root -p
+
+mysql> CREATE DATABASE busDEPOdb;
 mysql> show databases;
 
 +--------------------+
@@ -66,3 +71,14 @@ mysql> show databases;
 +--------------------+
 
 5 rows in set (0,00 sec)
+
+# 4. Create a database on the server through the console. 
+  # Creating tables
+mysql> 
+USE busDEPOdb;
+
+mysql> CREATE TABLE Buses (
+    -> Bus_ID int NOT NULL,
+    -> Route_ID int NOT NULL);
+Query OK, 0 rows affected (0,05 sec)
+
