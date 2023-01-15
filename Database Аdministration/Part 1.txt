@@ -183,8 +183,14 @@ mysql> ALTER TABLE Shedule ADD
 Query OK, 0 rows affected (0,10 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-mysql> select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_SCHEMA  = 'busDEPOdb';
+mysql> ALTER TABLE Shedule ADD 
+    -> CONSTRAINT FK_Shedule_Buses FOREIGN KEY (
+    -> Bus_ID) 
+    -> REFERENCES Buses (Bus_ID);
+Query OK, 30 rows affected (0,10 sec)
+Records: 30  Duplicates: 0  Warnings: 0
 
+mysql> select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_SCHEMA  = 'busDEPOdb';
 +--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
 | CONSTRAINT_CATALOG | CONSTRAINT_SCHEMA | CONSTRAINT_NAME    | TABLE_SCHEMA | TABLE_NAME | CONSTRAINT_TYPE | ENFORCED |
 +--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
@@ -193,6 +199,7 @@ mysql> select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_SCHEMA  = 
 | def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Drivers    | PRIMARY KEY     | YES      |
 | def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Routes     | PRIMARY KEY     | YES      |
 | def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Shedule    | PRIMARY KEY     | YES      |
+| def                | busDEPOdb         | FK_Shedule_Buses   | busDEPOdb    | Shedule    | FOREIGN KEY     | YES      |
 | def                | busDEPOdb         | FK_Shedule_Drivers | busDEPOdb    | Shedule    | FOREIGN KEY     | YES      |
 +--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
 
@@ -400,6 +407,99 @@ mysql> select * from Shedule;
 |    503 |        29 | odd      |
 |    503 |        30 | even     |
 +--------+-----------+----------+
+
+# 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY. 
+
+mysql> SELECT Bus_ID, Driver_ID, Work_day 
+    -> FROM Shedule 
+    -> WHERE Work_day='odd' 
+    -> ORDER BY Bus_ID;
++--------+-----------+----------+
+| Bus_ID | Driver_ID | Work_day |
++--------+-----------+----------+
+|    101 |         1 | odd      |
+|    102 |         3 | odd      |
+|    103 |         5 | odd      |
+|    201 |         7 | odd      |
+|    202 |         9 | odd      |
+|    203 |        11 | odd      |
+|    301 |        13 | odd      |
+|    302 |        15 | odd      |
+|    303 |        17 | odd      |
+|    401 |        19 | odd      |
+|    402 |        21 | odd      |
+|    403 |        23 | odd      |
+|    501 |        25 | odd      |
+|    502 |        27 | odd      |
+|    503 |        29 | odd      |
++--------+-----------+----------+
+
+mysql> SELECT Bus_ID, First_name, Last_name 
+     -> FROM Shedule, Drivers 
+     -> WHERE Shedule.Driver_ID = Drivers.Driver_ID 
+     -> ORDER BY Last_name;
++--------+------------+------------+
+| Bus_ID | First_name | Last_name  |
++--------+------------+------------+
+|    501 | Fedor      | Belyaev    |
+|    202 | Nazar      | Bobrov     |
+|    401 | Sergey     | Danilov    |
+|    201 | Andrey     | Dobrov     |
+|    102 | Dmitriy    | Dyadik     |
+|    402 | Ruslan     | Gorbachev  |
+|    302 | Evgeniy    | Kapustin   |
+|    302 | Kirill     | Kisilev    |
+|    203 | Philip     | Komarov    |
+|    203 | Yaroslav   | Kostin     |
+|    103 | Alexandr   | Kravchenko |
+|    402 | Ignatiy    | Legeyda    |
+|    401 | Boris      | Lukin      |
+|    503 | Yaroslav   | Matveev    |
+|    102 | Igor       | Nichiporuk |
+|    503 | Ivan       | Novikov    |
+|    301 | Juriy      | Pavlenko   |
+|    303 | Lavrentiy  | Petrenko   |
+|    101 | Ivan       | Petrov     |
+|    502 | Maxim      | Pilipenko  |
+|    202 | Ivan       | Savin      |
+|    303 | Vladislav  | Sazonov    |
+|    301 | Georgiy    | Shashkov   |
+|    103 | Andrey     | Shevshenko |
+|    403 | Makar      | Spivak     |
+|    403 | Andrey     | Timoshenko |
+|    502 | Egor       | Uvarov     |
+|    501 | Dmitriy    | Yarovoy    |
+|    101 | Aleksey    | Zapara     |
+|    201 | Petr       | Zhuk       |
++--------+------------+------------+
+
+mysql> SELECT Buses.Bus_ID, Buses.Route_ID
+    -> FROM Buses
+    -> JOIN Routes
+    -> ON Buses.Route_ID = Routes.Route_ID
+    -> GROUP BY Bus_ID
+    -> ORDER BY Distance;
++--------+----------+
+| Bus_ID | Route_ID |
++--------+----------+
+|    301 |        3 |
+|    302 |        3 |
+|    303 |        3 |
+|    201 |        2 |
+|    202 |        2 |
+|    203 |        2 |
+|    401 |        4 |
+|    402 |        4 |
+|    403 |        4 |
+|    101 |        1 |
+|    102 |        1 |
+|    103 |        1 |
+|    501 |        5 |
+|    502 |        5 |
+|    503 |        5 |
++--------+----------+
+
+
 
 
 
