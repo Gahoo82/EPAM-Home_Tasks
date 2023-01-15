@@ -131,13 +131,13 @@ mysql> CREATE TABLE Shedule (
 Query OK, 0 rows affected (0,03 sec)
 
 mysql> SHOW COLUMNS FROM Shedule;
-+--------------+------+------+-----+---------+-------+
-| Field        | Type | Null | Key | Default | Extra |
-+--------------+------+------+-----+---------+-------+
-| Bus_ID       | int  | NO   |     | NULL    |       |
-| Driver_ID    | int  | NO   |     | NULL    |       |
-| Date_of_work | date | NO   |     | NULL    |       |
-+--------------+------+------+-----+---------+-------+
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| Bus_ID       | int      | NO   |     | NULL    |       |
+| Driver_ID    | int      | NO   |     | NULL    |       |
+| Work_day     | char(10) | NO   |     | NULL    |       |
++--------------+----------+------+-----+---------+-------+
 
 mysql> SHOW TABLES;
 +---------------------+
@@ -148,6 +148,55 @@ mysql> SHOW TABLES;
 | Routes              |
 | Shedule             |
 +---------------------+
+
+mysql> ALTER TABLE Buses ADD
+    -> CONSTRAINT PK_B PRIMARY KEY (Bus_ID);
+Query OK, 0 rows affected (0,07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Routes ADD
+    -> CONSTRAINT PK_R PRIMARY KEY CLUSTERED (Route_ID);
+Query OK, 0 rows affected (0,07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Drivers ADD
+    -> CONSTRAINT PK_D PRIMARY KEY CLUSTERED (Driver_ID);
+Query OK, 0 rows affected (0,07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Shedule ADD
+    -> CONSTRAINT PK_S PRIMARY KEY CLUSTERED (Bus_ID, Driver_ID);
+Query OK, 0 rows affected (0,07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Buses ADD
+    -> CONSTRAINT FK_Buses_Routes FOREIGN KEY (
+    -> Route_ID)
+    -> REFERENCES Routes (Route_ID);
+Query OK, 0 rows affected (0,10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Shedule ADD
+    -> CONSTRAINT FK_Shedule_Drivers FOREIGN KEY (
+    -> Driver_ID)
+    -> REFERENCES Drivers (Driver_ID);
+Query OK, 0 rows affected (0,10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_SCHEMA  = 'busDEPOdb';
+
++--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
+| CONSTRAINT_CATALOG | CONSTRAINT_SCHEMA | CONSTRAINT_NAME    | TABLE_SCHEMA | TABLE_NAME | CONSTRAINT_TYPE | ENFORCED |
++--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
+| def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Buses      | PRIMARY KEY     | YES      |
+| def                | busDEPOdb         | FK_Buses_Routes    | busDEPOdb    | Buses      | FOREIGN KEY     | YES      |
+| def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Drivers    | PRIMARY KEY     | YES      |
+| def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Routes     | PRIMARY KEY     | YES      |
+| def                | busDEPOdb         | PRIMARY            | busDEPOdb    | Shedule    | PRIMARY KEY     | YES      |
+| def                | busDEPOdb         | FK_Shedule_Drivers | busDEPOdb    | Shedule    | FOREIGN KEY     | YES      |
++--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
+
+
 
 
 
