@@ -522,7 +522,7 @@ mysql> SELECT Buses.Bus_ID, Buses.Route_ID
       • Grant  : It is used to give user access privileges to a database.
       • Revoke : It is used to take back permissions from the user.
 
-      DDL - Rename
+DDL - Rename
 
 mysql> SELECT * FROM Buses;    
 +--------+----------+
@@ -569,6 +569,139 @@ mysql> select * from Cars;
 |    502 |        5 |
 |    503 |        5 |
 +--------+----------+
+
+DML = Update
+
+mysql> SELECT * FROM Routes;
++----------+----------+---------------+---------------+-------------+
+| Route_ID | Distance | Time_interval | Begin_of_work | End_of_work |
++----------+----------+---------------+---------------+-------------+
+|        1 |       10 |            50 | 05:30:00      | 21:30:00    |
+|        2 |        8 |            40 | 06:00:00      | 22:00:00    |
+|        3 |        5 |            30 | 05:40:00      | 22:20:00    |
+|        4 |        9 |            45 | 06:30:00      | 22:30:00    |
+|        5 |       12 |            60 | 06:00:00      | 23:00:00    |
++----------+----------+---------------+---------------+-------------+
+5 rows in set (0,00 sec)
+
+mysql> UPDATE Routes SET Begin_of_work='04:00:00' WHERE Route_ID=2;
+Query OK, 1 row affected (0,01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Routes;
++----------+----------+---------------+---------------+-------------+
+| Route_ID | Distance | Time_interval | Begin_of_work | End_of_work |
++----------+----------+---------------+---------------+-------------+
+|        1 |       10 |            50 | 05:30:00      | 21:30:00    |
+|        2 |        8 |            40 | 04:00:00      | 22:00:00    |
+|        3 |        5 |            30 | 05:40:00      | 22:20:00    |
+|        4 |        9 |            45 | 06:30:00      | 22:30:00    |
+|        5 |       12 |            60 | 06:00:00      | 23:00:00    |
++----------+----------+---------------+---------------+-------------+
+
+DCL = Grant & Revoke
+
+mysql> CREATE USER db_user@'localhost' IDENTIFIED BY 'mypass';
+Query OK, 0 rows affected (0,02 sec)
+
+mysql> GRANT ALL ON Routes TO db_user@'localhost';
+Query OK, 0 rows affected (0,02 sec)
+
+mysql> exit
+
+kostia@kostia-VirtualBox:~$ mysql -u db_user -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.31-0ubuntu0.22.04.1 (Ubuntu)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| busDEPOdb          |
+| information_schema |
+| performance_schema |
++--------------------+
+3 rows in set (0,00 sec)
+
+mysql> use busDEPOdb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+Database changed
+
+mysql> show tables;
++---------------------+
+| Tables_in_busDEPOdb |
++---------------------+
+| Routes              |
++---------------------+
+1 row in set (0,00 sec)
+
+mysql> exit;
+
+kostia@kostia-VirtualBox:~$ sudo mysql
+[sudo] password for kostia: 
+
+mysql> USE busDEPOdb;
+mysql> REVOKE ALL ON Routes FROM db_user@'localhost';
+Query OK, 0 rows affected (0,01 sec)
+
+# 8. Create a database of new users with different privileges. Connect to the 
+#    database as a new user and verify that the privileges allow or deny certain 
+#    actions. 
+
+mysql> CREATE USER user_1@'localhost' IDENTIFIED BY 'epam2023';
+Query OK, 0 rows affected (0,02 sec)
+
+mysql> GRANT SELECT ON busDEPOdb.* TO user_1@'localhost';
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> SHOW GRANTS FOR user_1@'localhost';
++-------------------------------------------------------+
+| Grants for user_1@localhost                           |
++-------------------------------------------------------+
+| GRANT USAGE ON *.* TO `user_1`@`localhost`            |
+| GRANT SELECT ON `busDEPOdb`.* TO `user_1`@`localhost` |
++-------------------------------------------------------+
+2 rows in set (0,00 sec)
+
+mysql> CREATE USER user_2@'%' IDENTIFIED BY '2023epam';
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> GRANT SELECT, INSERT, UPDATE, DELETE ON busDEPOdb.* TO user_2@'%';
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> SHOW GRANTS FOR user_2@'%';
++-----------------------------------------------------------------------+
+| Grants for user_2@%                                                   |
++-----------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `user_2`@`%`                                    |
+| GRANT SELECT, INSERT, UPDATE, DELETE ON `busDEPOdb`.* TO `user_2`@`%` |
++-----------------------------------------------------------------------+
+2 rows in set (0,01 sec)
+
+mysql> SELECT user FROM mysql.user;
++------------------+
+| user             |
++------------------+
+| user_2           |
+| db_user          |
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
+| user_1           |
++------------------+
+8 rows in set (0,00 sec)
+
+mysql> FLUSH PRIVILEGES;
+
+
+
+
+
 
 
 
