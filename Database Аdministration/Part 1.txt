@@ -287,11 +287,11 @@ mysql> insert into Drivers values
     -> (23, 'Timoshenko', 'Andrey'),
     -> (24, 'Spivak', 'Makar'),
     -> (25, 'Belyaev', 'Fedor'),
-    -> (26, 'Yalovoy', 'Dmitriy'),
+    -> (26, 'Yarovoy', 'Dmitriy'),
     -> (27, 'Pilipenko', 'Maxim'),
     -> (28, 'Uvarov', 'Egor'),
-    -> (29, 'Novikod', 'Ivan'),
-    -> (30, 'Matveeb', 'Yaroslav');
+    -> (29, 'Novikov', 'Ivan'),
+    -> (30, 'Matveev', 'Yaroslav');
 Query OK, 28 rows affected (0,01 sec)
 Records: 28  Duplicates: 0  Warnings: 0
 
@@ -324,11 +324,11 @@ mysql> select * from Drivers;
 |        23 | Timoshenko | Andrey     |
 |        24 | Spivak     | Makar      |
 |        25 | Belyaev    | Fedor      |
-|        26 | Yalovoy    | Dmitriy    |
+|        26 | Yarovoy    | Dmitriy    |
 |        27 | Pilipenko  | Maxim      |
 |        28 | Uvarov     | Egor       |
-|        29 | Novikod    | Ivan       |
-|        30 | Matveeb    | Yaroslav   |
+|        29 | Novikov    | Ivan       |
+|        30 | Matveev    | Yaroslav   |
 +-----------+------------+------------+
 
 
