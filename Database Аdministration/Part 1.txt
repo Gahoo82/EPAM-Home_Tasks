@@ -261,6 +261,77 @@ mysql> select * from Buses;
 |    503 |        5 |
 +--------+----------+
 
+mysql> insert into Drivers values
+    -> (1, 'Petrov', 'Ivan'), 
+    -> (2, 'Zapara', 'Aleksey');
+    -> (3, 'Dyadik', 'Dmitriy'),
+    -> (4, 'Nichiporuk', 'Igor'),
+    -> (5, 'Shevshenko', 'Andrey'),
+    -> (6, 'Kravchenko', 'Alexandr'),
+    -> (7, 'Dobrov', 'Andrey'),
+    -> (8, 'Zhuk', 'Petr'),
+    -> (9, 'Bobrov', 'Nazar'),
+    -> (10, 'Savin', 'Ivan'),
+    -> (11, 'Kostin', 'Yaroslav'),
+    -> (12, 'Komarov', 'Philip'),
+    -> (13, 'Pavlenko', 'Juriy'),
+    -> (14, 'Shashkov', 'Georgiy'),
+    -> (15, 'Kisilev', 'Kirill'),
+    -> (16, 'Kapustin', 'Evgeniy'),
+    -> (17, 'Sazonov', 'Vladislav'),
+    -> (18, 'Petrenko', 'Lavrentiy'),
+    -> (19, 'Danilov', 'Sergey'),
+    -> (20, 'Lukin', 'Boris'),
+    -> (21, 'Legeyda', 'Ignatiy'),
+    -> (22, 'Gorbachev', 'Ruslan'),
+    -> (23, 'Timoshenko', 'Andrey'),
+    -> (24, 'Spivak', 'Makar'),
+    -> (25, 'Belyaev', 'Fedor'),
+    -> (26, 'Yalovoy', 'Dmitriy'),
+    -> (27, 'Pilipenko', 'Maxim'),
+    -> (28, 'Uvarov', 'Egor'),
+    -> (29, 'Novikod', 'Ivan'),
+    -> (30, 'Matveeb', 'Yaroslav');
+Query OK, 28 rows affected (0,01 sec)
+Records: 28  Duplicates: 0  Warnings: 0
+
+mysql> select * from Drivers;
++-----------+------------+------------+
+| Driver_ID | Last_name  | First_name |
++-----------+------------+------------+
+|         1 | Petrov     | Ivan       |
+|         2 | Zapara     | Aleksey    |
+|         3 | Dyadik     | Dmitriy    |
+|         4 | Nichiporuk | Igor       |
+|         5 | Shevshenko | Andrey     |
+|         6 | Kravchenko | Alexandr   |
+|         7 | Dobrov     | Andrey     |
+|         8 | Zhuk       | Petr       |
+|         9 | Bobrov     | Nazar      |
+|        10 | Savin      | Ivan       |
+|        11 | Kostin     | Yaroslav   |
+|        12 | Komarov    | Philip     |
+|        13 | Pavlenko   | Juriy      |
+|        14 | Shashkov   | Georgiy    |
+|        15 | Kisilev    | Kirill     |
+|        16 | Kapustin   | Evgeniy    |
+|        17 | Sazonov    | Vladislav  |
+|        18 | Petrenko   | Lavrentiy  |
+|        19 | Danilov    | Sergey     |
+|        20 | Lukin      | Boris      |
+|        21 | Legeyda    | Ignatiy    |
+|        22 | Gorbachev  | Ruslan     |
+|        23 | Timoshenko | Andrey     |
+|        24 | Spivak     | Makar      |
+|        25 | Belyaev    | Fedor      |
+|        26 | Yalovoy    | Dmitriy    |
+|        27 | Pilipenko  | Maxim      |
+|        28 | Uvarov     | Egor       |
+|        29 | Novikod    | Ivan       |
+|        30 | Matveeb    | Yaroslav   |
++-----------+------------+------------+
+
+
 
 
 
