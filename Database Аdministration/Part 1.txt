@@ -499,6 +499,78 @@ mysql> SELECT Buses.Bus_ID, Buses.Route_ID
 |    503 |        5 |
 +--------+----------+
 
+# 7. Execute other different SQL queries DDL, DML, DCL.
+ DDL [Data Definition Language]: 
+      • Create(+): It is used to create objects in the database.
+      • Alter(+): It is used to alter the structure of the database.
+      • Drop: It is used to delete objects from the database.
+      • Truncate: It is used to remove all records from a table.
+      • Rename(+): It is used to rename an object.
+      • Comment: It is used to comment on the data dictionary.
+      
+ DML [Data Manipulation Language]:
+      • Select : It is used to retrieve data from a database.
+      • Insert : It is used to insert data into a table.
+      • Update : It is used to update existing data within a table.
+      • Delete : It is used to delete all records from a table.
+      • Merge  : It performs UPSERT operation, i.e., insert or update operations.
+      • Call   : It is used to call a structured query language or a Java subprogram.
+      • Explain Plan: It has the parameter of explaining data.
+      • Lock Table  : It controls concurrency.
+      
+ DCL [Data Control Language]:
+      • Grant  : It is used to give user access privileges to a database.
+      • Revoke : It is used to take back permissions from the user.
+
+      DDL - Rename
+
+mysql> SELECT * FROM Buses;    
++--------+----------+
+| Bus_ID | Route_ID |
++--------+----------+
+|    101 |        1 |
+|    102 |        1 |
+|    103 |        1 |
+|    201 |        2 |
+|    202 |        2 |
+|    203 |        2 |
+|    301 |        3 |
+|    302 |        3 |
+|    303 |        3 |
+|    401 |        4 |
+|    402 |        4 |
+|    403 |        4 |
+|    501 |        5 |
+|    502 |        5 |
+|    503 |        5 |
++--------+----------+
+
+mysql> RENAME TABLE Buses to Cars;
+mysql> select * from Buses;
+ERROR 1146 (42S02): Table 'busDEPOdb.Buses' doesn't exist
+
+mysql> select * from Cars;
++--------+----------+
+| Bus_ID | Route_ID |
++--------+----------+
+|    101 |        1 |
+|    102 |        1 |
+|    103 |        1 |
+|    201 |        2 |
+|    202 |        2 |
+|    203 |        2 |
+|    301 |        3 |
+|    302 |        3 |
+|    303 |        3 |
+|    401 |        4 |
+|    402 |        4 |
+|    403 |        4 |
+|    501 |        5 |
+|    502 |        5 |
+|    503 |        5 |
++--------+----------+
+
+
 
 
 
