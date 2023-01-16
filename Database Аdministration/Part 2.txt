@@ -1,1 +1,47 @@
 
+# =============================       PART 2        =============================
+
+
+# 10.Make backup of your database. 
+# 11.Delete the table and/or part of the data in the table. 
+# 12.Restore your database. 
+# 13.Transfer your local database to RDS AWS. 
+# 14.Connect to your database. 
+# 15.Execute SELECT operator similar step 6. 
+# 16.Create the dump of your database. 
+# ===============================================================================
+# https://
+# ===============================================================================
+
+#     https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
+# A simple and easy method for creating MySQL backups is to use the mysqldump command. This command will 
+# create a simple .sql file of an existing database, which can then be restored to any other empty 
+# MySQL database. This article will work for any Linux distribution running MySQL.
+
+# 1. Back up the database using the following command:
+#     mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
+# The parameters of the said command as follows:
+	# [username] - A valid MySQL username.
+	# [password] - A valid MySQL password for the user.
+	# [database_name] - A valid Database name you want to take backup.
+	# [dump_file.sql] - The name of backup dump file you want to generate.
+
+# 2. Restore the backup to a local database server - the mysql command will let you take the contents 
+# of a .sql file backup, and restore it directly to a database. This is the syntax for the command:
+#     mysql -u [username] -p[password] [database_name] < [dump_file.sql]
+ 
+# 3. Restore the backup to a remote database server - you can also use the mysql command to restore a .sql file
+# backup to a remote MySQL server. If you have another server running MySQL, and you have the database
+# credentials, you can define a hostname in the command by adding the -h flag to specify a hostname. This 
+# changes the syntax of the command to:
+#     mysql –h [hostname] -u [username] -p[password] [database_name] < [dump_file.sql]
+#
+# ===============================================================================
+
+
+# 10.Make backup of your database.
+#     mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
+
+mysqldump -u root -p busDEPOdb > ./backup_4_DB/busDEPOdb.sql
+Enter password:*************
+
