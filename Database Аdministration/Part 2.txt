@@ -172,5 +172,191 @@ mysql> SELECT * FROM Buses;
 
 # 13.Transfer your local database to RDS AWS. 
 
+mysql -h aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.31 Source distribution
 
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> status;
+--------------
+mysql  Ver 8.0.31-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
+
+Connection id:		17
+Current database:	
+Current user:		admin@159.224.119.189
+SSL:			Cipher in use is TLS_AES_256_GCM_SHA384
+Current pager:		stdout
+Using outfile:		''
+Using delimiter:	;
+Server version:		8.0.31 Source distribution
+Protocol version:	10
+Connection:		aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com via TCP/IP
+Server characterset:	utf8mb4
+Db     characterset:	utf8mb4
+Client characterset:	utf8mb4
+Conn.  characterset:	utf8mb4
+TCP port:		3306
+Binary data as:		Hexadecimal
+Uptime:			13 min 40 sec
+
+Threads: 3  Questions: 9746  Slow queries: 0  Opens: 281  Flush tables: 3  Open tables: 174  Queries per second avg: 11.885
+--------------
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0,04 sec)
+mysql> CREATE DATABASE busDEPOdb;
+Query OK, 1 row affected (0,05 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| busDEPOdb          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0,05 sec)
+
+mysql -h aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com -P 3306 -u admin -p busDEPOdb < ./backup_my_db/busDEPOdb.sql
+Enter password:********
+
+mysql -h aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 21
+Server version: 8.0.31 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| busDEPOdb          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0,04 sec)
+
+mysql> USE busDEPOdb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_busDEPOdb |
++---------------------+
+| Buses               |
+| Drivers             |
+| Routes              |
+| Shedule             |
++---------------------+
+4 rows in set (0,04 sec)
+
+# 15.Execute SELECT operator similar step 6.
+
+mysql> SELECT Bus_ID, Driver_ID, Work_day
+    -> FROM Shedule
+    -> WHERE Work_day='even'
+    -> ORDER BY Bus_ID DESC;
++--------+-----------+----------+
+| Bus_ID | Driver_ID | Work_day |
++--------+-----------+----------+
+|    503 |        30 | even     |
+|    502 |        28 | even     |
+|    501 |        26 | even     |
+|    403 |        24 | even     |
+|    402 |        22 | even     |
+|    401 |        20 | even     |
+|    303 |        18 | even     |
+|    302 |        16 | even     |
+|    301 |        14 | even     |
+|    203 |        12 | even     |
+|    202 |        10 | even     |
+|    201 |         8 | even     |
+|    103 |         6 | even     |
+|    102 |         4 | even     |
+|    101 |         2 | even     |
++--------+-----------+----------+
+15 rows in set (0,04 sec)
+
+# 16.Create the dump of your database.
+
+kostia@kostia-VirtualBox:~$ mysqldump -h aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com -P 3306 -u admin -p busDEPOdb > ./backup_my_db/aws_dump_busDEPOdb.sql
+Enter password: 
+
+Warning: A partial dump from a server that has GTIDs will by default include the GTIDs of all transactions, even those that changed suppressed parts of the database. If you don't want to restore GTIDs, pass --set-gtid-purged=OFF. To make a complete dump, pass --all-databases --triggers --routines --events. 
+kostia@kostia-VirtualBox:~$ cat ./backup_my_db/aws_dump_busDEPOdb.sql
+-- MySQL dump 10.13  Distrib 8.0.31, for Linux (x86_64)
+--
+-- Host: aws-db.c3bm4b5egfgp.eu-central-1.rds.amazonaws.com    Database: busDEPOdb
+-- ------------------------------------------------------
+-- Server version	8.0.31
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
+SET @@SESSION.SQL_LOG_BIN= 0;
+
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '';
+
+--
+-- Table structure for table `Buses`
+--
+
+DROP TABLE IF EXISTS `Buses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Buses` (
+  `Bus_ID` int NOT NULL,
+  `Route_ID` int NOT NULL,
+  PRIMARY KEY (`Bus_ID`),
+  KEY `FK_Buses_Routes` (`Route_ID`),
+  CONSTRAINT `FK_Buses_Routes` FOREIGN KEY (`Route_ID`) REFERENCES `Routes` (`Route_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Buses`
+--
 
