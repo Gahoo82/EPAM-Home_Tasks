@@ -100,4 +100,77 @@ UNLOCK TABLES;
 
 # 11.Delete the table and/or part of the data in the table. 
 
+mysql> SELECT * FROM Buses;
++--------+----------+
+| Bus_ID | Route_ID |
++--------+----------+
+|    101 |        1 |
+|    102 |        1 |
+|    103 |        1 |
+|    201 |        2 |
+|    202 |        2 |
+|    203 |        2 |
+|    301 |        3 |
+|    302 |        3 |
+|    303 |        3 |
+|    401 |        4 |
+|    402 |        4 |
+|    403 |        4 |
+|    501 |        5 |
+|    502 |        5 |
+|    503 |        5 |
++--------+----------+
+15 rows in set (0,00 sec)
+
+mysql> DELETE FROM Buses;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`busDEPOdb`.`Shedule`, CONSTRAINT `FK_Shedule_Buses` FOREIGN KEY (`Bus_ID`) REFERENCES `Buses` (`Bus_ID`))
+mysql> SET FOREIGN_KEY_CHECKS=0;
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> DELETE FROM Buses;
+Query OK, 15 rows affected (0,00 sec)
+
+mysql> SET FOREIGN_KEY_CHECKS=1;
+Query OK, 0 rows affected (0,00 sec)
+
+mysql> SELECT * FROM Buses;
+Empty set (0,00 sec)
+
+
+# 12.Restore your database. 
+
+mysql -u root -p busDEPOdb < ./backup_my_db/busDEPOdb.sql
+Enter password:********
+
+mysql> USE busDEPOdb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM Buses;
++--------+----------+
+| Bus_ID | Route_ID |
++--------+----------+
+|    101 |        1 |
+|    102 |        1 |
+|    103 |        1 |
+|    201 |        2 |
+|    202 |        2 |
+|    203 |        2 |
+|    301 |        3 |
+|    302 |        3 |
+|    303 |        3 |
+|    401 |        4 |
+|    402 |        4 |
+|    403 |        4 |
+|    501 |        5 |
+|    502 |        5 |
+|    503 |        5 |
++--------+----------+
+15 rows in set (0,00 sec)
+
+
+# 13.Transfer your local database to RDS AWS. 
+
+
 
