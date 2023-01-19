@@ -1,0 +1,147 @@
+=============================       PART 3        =============================
+# =============================================================================== 
+# 17. Create a database. Use the use command to connect to a new database (If it 
+#     doesn't exist, Mongo will create it when you write to it).
+# 18. Create a collection. Use db.createCollection to create a collection. I'll 
+#     leave the subject up to you. Run show dbs and show collections to view 
+#     your database and collections.
+# 19. Create some documents. Insert a couple of documents into your collection. 
+#     I'll leave the subject matter up to you, perhaps cars or hats.
+# 20. Use find() to list documents out.
+# ===============================================================================
+
+Install mongodb 6.0.3 on Ubuntu 22.04.1, the new official (and secure) fix for this is:
+
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+sudo apt-get update
+
+sudo apt-get install mongodb-org
+
+
+# 17. Create a database. Use the use command to connect to a new database (If it 
+#     doesn't exist, Mongo will create it when you write to it).
+
+kostia@kostia-VirtualBox:~$ mongosh
+Current Mongosh Log ID:	63c90397600101f5f4a9347a
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2
+Using MongoDB:		6.0.3
+Using Mongosh:		1.6.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+
+test> use db_Mongo
+switched to db db_Mongo
+
+db_Mongo> show databases
+admin   40.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+
+# 18. Create a collection. Use db.createCollection to create a collection. I'll 
+#     leave the subject up to you. Run show dbs and show collections to view 
+#     your database and collections.
+# 19. Create some documents. Insert a couple of documents into your collection. 
+#     I'll leave the subject matter up to you, perhaps cars or hats.
+
+db_Mongo> db.createCollection("Company")
+
+{ ok: 1 }
+
+db_Mongo> db.Company.insertMany([
+... {name: "Ivan Petrov", age: "22", department: "retail", salary: "15000"},
+... {name: "Andrey Kovtun", age: "25", department: "retail", salary: "17000"},
+... {name: "Nina Shevchenko", age: "32", department: "retail", salary: "18000"},
+... {name: "Elena Kovalenko", age: "28", department: "retail", salary: "19000"},
+... {name: "Sergey Danilko", age: "34", department: "retail", salary: "15000"},
+... {name: "Dmitriy Pavlenko", age: "28", department: "main office", salary: "25000"},
+... {name: "Aleksey Avramenko", age: "40", department: "main office", salary: "30000"},
+... {name: "Larisa Ivanenko", age: "29", department: "main office", salary: "32000"}
+... ])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63c913a316e993150b37b32d"),
+    '1': ObjectId("63c913a316e993150b37b32e"),
+    '2': ObjectId("63c913a316e993150b37b32f"),
+    '3': ObjectId("63c913a316e993150b37b330"),
+    '4': ObjectId("63c913a316e993150b37b331"),
+    '5': ObjectId("63c913a316e993150b37b332"),
+    '6': ObjectId("63c913a316e993150b37b333"),
+    '7': ObjectId("63c913a316e993150b37b334")
+  }
+}
+
+db_Mongo> show collections;
+Company
+db_Mongo> show databases
+admin      40.00 KiB
+config    108.00 KiB
+db_Mongo   40.00 KiB
+local      72.00 KiB
+
+# 20. Use find() to list documents out.
+
+db_Mongo> db.Company.find({"department":"retail"});
+[
+  {
+    _id: ObjectId("63c913a316e993150b37b32d"),
+    name: 'Ivan Petrov',
+    age: '22',
+    department: 'retail',
+    salary: '15000'
+  },
+  {
+    _id: ObjectId("63c913a316e993150b37b32e"),
+    name: 'Andrey Kovtun',
+    age: '25',
+    department: 'retail',
+    salary: '17000'
+  },
+  {
+    _id: ObjectId("63c913a316e993150b37b32f"),
+    name: 'Nina Shevchenko',
+    age: '32',
+    department: 'retail',
+    salary: '18000'
+  },
+  {
+    _id: ObjectId("63c913a316e993150b37b330"),
+    name: 'Elena Kovalenko',
+    age: '28',
+    department: 'retail',
+    salary: '19000'
+  },
+  {
+    _id: ObjectId("63c913a316e993150b37b331"),
+    name: 'Sergey Danilko',
+    age: '34',
+    department: 'retail',
+    salary: '15000'
+  }
+]
+
+db_Mongo> db.Company.find({"salary":"17000"});
+
+[
+  {
+    _id: ObjectId("63c913a316e993150b37b32e"),
+    name: 'Andrey Kovtun',
+    age: '25',
+    department: 'retail',
+    salary: '17000'
+  }
+]
+
+
+
+
+
+
+
+
