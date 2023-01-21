@@ -1,5 +1,5 @@
 ## PART 1
-[Part 1 text version)](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
+[Part 1 text version](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
 1. Download MySQL server for your OS on VM. 
 2. Install MySQL server on VM. 
 3. Select a subject area and describe the database schema, (minimum 3 tables) 
@@ -7,3 +7,17 @@
 5. Fill in tables.
 
 ![1-5_points](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/1-5_points.png)
+
+
+6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
+![6_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/6_point.png)
+
+7. Execute other different SQL queries DDL, DML, DCL. 
+![Task1__Q7](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q7.png)
+
+8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions. 
+![Task1__Q8](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q8.png)
+
+9. Make a selection from the main table DB MySQL.
+![Task1__Q9](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q9.png)
+
