@@ -6,3 +6,4 @@
 4. Create a database on the server through the console. 
 5. Fill in tables.
 
+![1-5_points](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/1-5_points.png)
