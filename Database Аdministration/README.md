@@ -13,7 +13,7 @@
 ![6_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/6_point.png)
 
 7. Execute other different SQL queries DDL, DML, DCL. 
-![7_point]()
+![7_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/7_point.png)
 
 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions. 
 ![8_point]()
