@@ -13,11 +13,11 @@
 ![6_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/6_point.png)
 
 7. Execute other different SQL queries DDL, DML, DCL. 
-![Task1__Q7](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q7.png)
+![7_point]()
 
 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions. 
-![Task1__Q8](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q8.png)
+![8_point]()
 
 9. Make a selection from the main table DB MySQL.
-![Task1__Q9](https://github.com/Ivan2navI/L1_EPAM/blob/main/3.%20Databases%20Task/info_and_pictures/Task1__Q9.png)
+![9_point]()
 
