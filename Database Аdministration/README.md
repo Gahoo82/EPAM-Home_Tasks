@@ -1,5 +1,5 @@
 ## PART 1
-[PART 1 (results are here)]()
+[Part 1 text version)](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
 1. Download MySQL server for your OS on VM. 
 2. Install MySQL server on VM. 
 3. Select a subject area and describe the database schema, (minimum 3 tables) 
