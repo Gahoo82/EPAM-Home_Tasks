@@ -31,12 +31,18 @@
 10. Make backup of your database.
 11. Delete the table and/or part of the data in the table.
 12. Restore your database.
-![Task2__Q12](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/10-12_points.png)
+![10-12_points](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/10-12_points.png)
 
 13. Transfer your local database to RDS AWS.
 14. Connect to your database.
-* Creating an Amazon Relational Database Service (Amazon RDS): \
-![Task2__Q13_1]()
+* Creating an Amazon Relational Database Service (Amazon RDS): 
+* 
+![AWS_create_1_2_3](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_1_2_3.png)
+
+![AWS_create_4_5](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_4_5.png)
+
+![AWS_create_6](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_6.png)
+
 
 * Connecting from local host (Ubuntu 22.04.1LTS) to RDS, then create DB "myAVIAdb.sql" and backup from local database to RDS: \
 ![Task2__Q13_2]()
