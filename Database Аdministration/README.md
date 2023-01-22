@@ -26,7 +26,7 @@
 
 
 ## PART 2 
-[PART 2-text version)]()
+[PART 2-text version]()
 
 10. Make backup of your database.
 11. Delete the table and/or part of the data in the table.
