@@ -36,7 +36,7 @@
 13. Transfer your local database to RDS AWS.
 14. Connect to your database.
 * Creating an Amazon Relational Database Service (Amazon RDS): 
-* 
+
 ![AWS_create_1_2_3](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_1_2_3.png)
 
 ![AWS_create_4_5](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_4_5.png)
@@ -44,7 +44,7 @@
 ![AWS_create_6](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_6.png)
 
 
-* Connecting from local host (Ubuntu 22.04.1LTS) to RDS, then create DB "myAVIAdb.sql" and backup from local database to RDS:
+* Connecting from local host (Ubuntu 22.04.1) to RDS, then create DB "busDEPOdb.sql" and backup from local database to RDS:
 
 ![restore_db_to_AWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/restore_db_to_AWS.png)
 
