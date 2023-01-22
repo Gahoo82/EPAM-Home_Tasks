@@ -28,14 +28,10 @@
 ## PART 2 
 [PART 2-text version)]()
 
-10. Make backup of your database.\
-![Task2__Q10]()
-
-11. Delete the table and/or part of the data in the table.\
-![Task2__Q11]()
-
-12. Restore your database.\
-![Task2__Q12]()
+10. Make backup of your database.
+11. Delete the table and/or part of the data in the table.
+12. Restore your database.
+![Task2__Q12](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/10-12_points.png)
 
 13. Transfer your local database to RDS AWS.
 14. Connect to your database.
