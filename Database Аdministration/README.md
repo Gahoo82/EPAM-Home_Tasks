@@ -1,5 +1,6 @@
-## PART 1
+# PART 1
 [Part 1 - text version](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
+
 1. Download MySQL server for your OS on VM. 
 2. Install MySQL server on VM. 
 3. Select a subject area and describe the database schema, (minimum 3 tables) 
@@ -25,7 +26,7 @@
 ![9_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/9_point.png)
 
 
-## PART 2 
+# PART 2 
 [PART 2-text version]()
 
 10. Make backup of your database.
@@ -57,7 +58,7 @@
 ![dump_fromAWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/dump_fromAWS.png)
 
 
-## PART 3 – MongoDB 
+# PART 3 – MongoDB 
 [PART 3 - text version](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%203.txt)
 
 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it). 
