@@ -48,11 +48,9 @@
 
 ![restore_db_to_AWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/restore_db_to_AWS.png)
 
+15. Execute SELECT operator similar step 6. 
 
-
-
-15. Execute SELECT operator similar step 6. \
-![Task2__Q15]()
+![SELECT_AWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/SELECT_AWS.png)
 
 16. Create the dump of your database. \
 ![Task2__Q16]()
