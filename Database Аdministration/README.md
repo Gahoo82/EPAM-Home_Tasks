@@ -44,11 +44,12 @@
 ![AWS_create_6](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/AWS_create_6.png)
 
 
-* Connecting from local host (Ubuntu 22.04.1LTS) to RDS, then create DB "myAVIAdb.sql" and backup from local database to RDS: \
-![Task2__Q13_2]()
+* Connecting from local host (Ubuntu 22.04.1LTS) to RDS, then create DB "myAVIAdb.sql" and backup from local database to RDS:
 
-* Check DB Shema: \
-![Task2__Q14]()
+![restore_db_to_AWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/restore_db_to_AWS.png)
+
+
+
 
 15. Execute SELECT operator similar step 6. \
 ![Task2__Q15]()
