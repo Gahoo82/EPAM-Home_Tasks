@@ -64,8 +64,6 @@
 18-19. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections. 
 Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats. 
 ![db%26collection](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%203_Screenshots/db%26collection.png)
-![Task3__Q18.19_2]()
-![Task3__Q18.19_3]()
 
 20. Use find() to list documents out. \
-![Task3__Q20]()
+![find](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%203_Screenshots/find.png)
