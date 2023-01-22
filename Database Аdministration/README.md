@@ -70,3 +70,5 @@ Create some documents. Insert a couple of documents into your collection. I'll l
 20. Use find() to list documents out. 
 
 ![find](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%203_Screenshots/find.png)
+
+![mongo_6](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%203_Screenshots/mongo_6.png)
