@@ -1,7 +1,7 @@
 
-# =============================       PART 2        =============================
+PART 2    
 
-
+# =============================================================================================================================
 # 10.Make backup of your database. 
 # 11.Delete the table and/or part of the data in the table. 
 # 12.Restore your database. 
@@ -9,14 +9,14 @@
 # 14.Connect to your database. 
 # 15.Execute SELECT operator similar step 6. 
 # 16.Create the dump of your database. 
-# ===============================================================================
-# https://
-# ===============================================================================
 
-#     https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
+
+# https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux
 # A simple and easy method for creating MySQL backups is to use the mysqldump command. This command will 
 # create a simple .sql file of an existing database, which can then be restored to any other empty 
 # MySQL database. This article will work for any Linux distribution running MySQL.
+
+# =============================================================================================================================
 
 # 1. Back up the database using the following command:
 #     mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
@@ -35,12 +35,11 @@
 # credentials, you can define a hostname in the command by adding the -h flag to specify a hostname. This 
 # changes the syntax of the command to:
 #     mysql –h [hostname] -u [username] -p[password] [database_name] < [dump_file.sql]
-#
-# ===============================================================================
 
+# =============================================================================================================================
 
 # 10.Make backup of your database.
-#     mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
+#    mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
 
 #### ERROR 1698 (28000): Access denied for user 'root'@'localhost'
 #### (https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost)
@@ -96,7 +95,8 @@ INSERT INTO `Buses` VALUES (101,1),(102,1),(103,1),(201,2),(202,2),(203,2),(301,
 /*!40000 ALTER TABLE `Buses` ENABLE KEYS */;
 UNLOCK TABLES;
 ............
-======================================================================================================
+
+# =============================================================================================================================
 
 # 11.Delete the table and/or part of the data in the table. 
 
@@ -136,6 +136,7 @@ Query OK, 0 rows affected (0,00 sec)
 mysql> SELECT * FROM Buses;
 Empty set (0,00 sec)
 
+# =============================================================================================================================
 
 # 12.Restore your database. 
 
@@ -169,6 +170,7 @@ mysql> SELECT * FROM Buses;
 +--------+----------+
 15 rows in set (0,00 sec)
 
+# =============================================================================================================================
 
 # 13.Transfer your local database to RDS AWS. 
 
@@ -281,6 +283,8 @@ mysql> show tables;
 +---------------------+
 4 rows in set (0,04 sec)
 
+# =============================================================================================================================
+
 # 15.Execute SELECT operator similar step 6.
 
 mysql> SELECT Bus_ID, Driver_ID, Work_day
@@ -307,6 +311,8 @@ mysql> SELECT Bus_ID, Driver_ID, Work_day
 |    101 |         2 | even     |
 +--------+-----------+----------+
 15 rows in set (0,04 sec)
+
+# =============================================================================================================================
 
 # 16.Create the dump of your database.
 
