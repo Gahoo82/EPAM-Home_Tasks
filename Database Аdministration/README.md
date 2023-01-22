@@ -23,5 +23,5 @@
 
 9. Make a selection from the main table DB MySQL.
 
-![9_point]()
+![9_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/9_point.png)
 
