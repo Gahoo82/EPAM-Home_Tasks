@@ -1,5 +1,5 @@
-# PART 1        
-# =============================================================================== 
+  PART 1        
+# =============================================================================================================================
 
 # 1. Download MySQL server for your OS on VM. 
 # 2. Install MySQL server on VM. 
@@ -12,15 +12,16 @@
 #    database as a new user and verify that the privileges allow or deny certain 
 #    actions. 
 # 9. Make a selection from the main table DB MySQL.
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 1. Download MySQL server for your OS on VM. 
 
 sudo apt update
 sudo apt list --upgradable # get a list of upgrades
 sudo apt upgrade
-# ===============================================================================
 
+# =============================================================================================================================
 
 # 2. Install MySQL server on VM.
 apt install mysql-server-8.0
@@ -51,7 +52,8 @@ STATUS;
 
   #We can see MySQL version as follows:
 SHOW VARIABLES LIKE "%version%";
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 3. Select a subject area and describe the database schema, (minimum 3 tables)
   #Login into MySQL 8 server for testing purpose
@@ -71,7 +73,8 @@ mysql> show databases;
 +--------------------+
 
 5 rows in set (0,00 sec)
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 4. Create a database on the server through the console. 
   # Creating tables
@@ -203,7 +206,8 @@ mysql> select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_SCHEMA  = 
 | def                | busDEPOdb         | FK_Shedule_Buses   | busDEPOdb    | Shedule    | FOREIGN KEY     | YES      |
 | def                | busDEPOdb         | FK_Shedule_Drivers | busDEPOdb    | Shedule    | FOREIGN KEY     | YES      |
 +--------------------+-------------------+--------------------+--------------+------------+-----------------+----------+
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 5. Fill in tables.
 
@@ -409,7 +413,8 @@ mysql> select * from Shedule;
 |    503 |        29 | odd      |
 |    503 |        30 | even     |
 +--------+-----------+----------+
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY. 
 
@@ -501,7 +506,8 @@ mysql> SELECT Buses.Bus_ID, Buses.Route_ID
 |    502 |        5 |
 |    503 |        5 |
 +--------+----------+
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 7. Execute other different SQL queries DDL, DML, DCL.
  DDL [Data Definition Language]: 
@@ -650,7 +656,8 @@ kostia@kostia-VirtualBox:~$ sudo mysql
 mysql> USE busDEPOdb;
 mysql> REVOKE ALL ON Routes FROM db_user@'localhost';
 Query OK, 0 rows affected (0,01 sec)
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 8. Create a database of new users with different privileges. Connect to the 
 #    database as a new user and verify that the privileges allow or deny certain 
@@ -702,7 +709,8 @@ mysql> SELECT user FROM mysql.user;
 8 rows in set (0,00 sec)
 
 mysql> FLUSH PRIVILEGES;
-# ===============================================================================
+
+# =============================================================================================================================
 
 # 9. Make a selection from the main table DB MySQL.
 
