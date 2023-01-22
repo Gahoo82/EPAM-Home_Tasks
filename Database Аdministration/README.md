@@ -52,5 +52,6 @@
 
 ![SELECT_AWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/SELECT_AWS.png)
 
-16. Create the dump of your database. \
-![Task2__Q16]()
+16. Create the dump of your database. 
+17. 
+![dump_fromAWS](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%202_Screenshots/dump_fromAWS.png)
