@@ -24,6 +24,7 @@ sudo apt upgrade
 # =============================================================================================================================
 
 # 2. Install MySQL server on VM.
+
 apt install mysql-server-8.0
 sudo mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
@@ -56,6 +57,7 @@ SHOW VARIABLES LIKE "%version%";
 # =============================================================================================================================
 
 # 3. Select a subject area and describe the database schema, (minimum 3 tables)
+
   #Login into MySQL 8 server for testing purpose
 mysql -u root -p
 
@@ -77,6 +79,7 @@ mysql> show databases;
 # =============================================================================================================================
 
 # 4. Create a database on the server through the console. 
+
   # Creating tables
 mysql> 
 USE busDEPOdb;
@@ -510,6 +513,7 @@ mysql> SELECT Buses.Bus_ID, Buses.Route_ID
 # =============================================================================================================================
 
 # 7. Execute other different SQL queries DDL, DML, DCL.
+
  DDL [Data Definition Language]: 
       • Create(+): It is used to create objects in the database.
       • Alter(+): It is used to alter the structure of the database.
