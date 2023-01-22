@@ -1,7 +1,8 @@
 
-PART 2    
+PART 2  
 
 # =============================================================================================================================
+
 # 10.Make backup of your database. 
 # 11.Delete the table and/or part of the data in the table. 
 # 12.Restore your database. 
@@ -39,6 +40,7 @@ PART 2
 # =============================================================================================================================
 
 # 10.Make backup of your database.
+
 #    mysqldump -u [username] -p[password] [database_name] > [dump_file.sql]
 
 #### ERROR 1698 (28000): Access denied for user 'root'@'localhost'
