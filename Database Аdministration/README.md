@@ -1,5 +1,5 @@
 ## PART 1
-[Part 1 text version](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
+[Part 1 - text version](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201.txt)
 1. Download MySQL server for your OS on VM. 
 2. Install MySQL server on VM. 
 3. Select a subject area and describe the database schema, (minimum 3 tables) 
@@ -7,7 +7,6 @@
 5. Fill in tables.
 
 ![1-5_points](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/1-5_points.png)
-
 
 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
 
@@ -25,3 +24,32 @@
 
 ![9_point](https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Database%20%D0%90dministration/Part%201_Screenshots/9_point.png)
 
+
+## PART 2 
+[PART 2-text version)]()
+
+10. Make backup of your database.\
+![Task2__Q10]()
+
+11. Delete the table and/or part of the data in the table.\
+![Task2__Q11]()
+
+12. Restore your database.\
+![Task2__Q12]()
+
+13. Transfer your local database to RDS AWS.
+14. Connect to your database.
+* Creating an Amazon Relational Database Service (Amazon RDS): \
+![Task2__Q13_1]()
+
+* Connecting from local host (Ubuntu 22.04.1LTS) to RDS, then create DB "myAVIAdb.sql" and backup from local database to RDS: \
+![Task2__Q13_2]()
+
+* Check DB Shema: \
+![Task2__Q14]()
+
+15. Execute SELECT operator similar step 6. \
+![Task2__Q15]()
+
+16. Create the dump of your database. \
+![Task2__Q16]()
