@@ -31,12 +31,10 @@ Using MongoDB:		6.0.3
 Using Mongosh:		1.6.2
 
 For mongosh info see: https://docs.mongodb.com/mongodb-shell/
-
 ------
 
 test> use db_Mongo
 switched to db db_Mongo
-
 db_Mongo> show databases
 admin   40.00 KiB
 config  72.00 KiB
