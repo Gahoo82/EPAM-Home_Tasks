@@ -1,5 +1,5 @@
-=============================       PART 3        =============================
-# =============================================================================== 
+PART 3
+# =============================================================================================================================
 # 17. Create a database. Use the use command to connect to a new database (If it 
 #     doesn't exist, Mongo will create it when you write to it).
 # 18. Create a collection. Use db.createCollection to create a collection. I'll 
@@ -8,7 +8,7 @@
 # 19. Create some documents. Insert a couple of documents into your collection. 
 #     I'll leave the subject matter up to you, perhaps cars or hats.
 # 20. Use find() to list documents out.
-# ===============================================================================
+# =============================================================================================================================
 
 Install mongodb 6.0.3 on Ubuntu 22.04.1, the new official (and secure) fix for this is:
 
@@ -19,7 +19,7 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb
 sudo apt-get update
 
 sudo apt-get install mongodb-org
-
+# =============================================================================================================================
 
 # 17. Create a database. Use the use command to connect to a new database (If it 
 #     doesn't exist, Mongo will create it when you write to it).
@@ -39,10 +39,13 @@ db_Mongo> show databases
 admin   40.00 KiB
 config  72.00 KiB
 local   72.00 KiB
+# =============================================================================================================================
 
 # 18. Create a collection. Use db.createCollection to create a collection. I'll 
+
 #     leave the subject up to you. Run show dbs and show collections to view 
 #     your database and collections.
+
 # 19. Create some documents. Insert a couple of documents into your collection. 
 #     I'll leave the subject matter up to you, perhaps cars or hats.
 
@@ -82,6 +85,7 @@ admin      40.00 KiB
 config    108.00 KiB
 db_Mongo   40.00 KiB
 local      72.00 KiB
+# =============================================================================================================================
 
 # 20. Use find() to list documents out.
 
