@@ -185,7 +185,7 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
  
  #### 5. Розрахувати спільну адресу та маску (summarizing) адрес 172.17.D+10.1 та 172.17.D+20.1, при чому префікс має бути максимально можливим. Видалити маршрути, встановлені на попередньому кроці та замінити їх об’єднаним маршрутом, якій має проходити через Server_1. 
  
- <p align="center">
+<p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Summary_IP_addr.png">
 </p>
 
@@ -204,6 +204,24 @@ sudo apt install openssh-server #Ubuntu - Client1
 # або
 sudo yum –y install openssh-server #CentOS - Client2
 ```
+ Перевіряємо чи активний ssh.service на хостах та сервері. Якщо ні, то запускаємо ssh.
+
+```console
+systemctl is-active ssh
+
+sudo systemctl start ssh
+```
+
+ Підключаємось з Client1 до Server1 та Client2. А з Client2 до Server1 та Client1.
+
+ ```console
+ ssh kostia@10.82.29.1 # Client1 to Server1
+ ssh kostia@172.16.29.2 # Client1 to Client2
+ 
+ ssh kostia@10.10.82.1 # Client2 to Server1
+ ssh kostia@172.16.29.1 # Client2 to Client1
+ ```
+
 
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
