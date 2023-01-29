@@ -276,3 +276,9 @@ sudo systemctl start ssh
  ```console
  sudo iptables -A INPUT -p icmp -d 172.17.49.1 -j DROP
  ```
+ 
+ <p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Point_7/Point%207.png">
+</p>
+ 
+ 
