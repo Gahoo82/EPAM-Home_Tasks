@@ -261,3 +261,18 @@ sudo systemctl start ssh
  ### 7. Налаштуйте на Server_1 firewall таким чином:
  #### - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2 
  #### - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
+
+Налаштовуємо на Server1 правило iptables для INPUT на інтерфейсі enp0s9. Так як були інші налаштування, то замінюємо перше правило в INPUT (-R)
+ ```console
+ sudo iptables -R INPUT 1 -i enp0s9 -p tcp --dport ssh -s 10.10.82.0/24 -j DROP
+ ```
+ Таким чином забороняємо з'єднання по SSH з Client2 до Server1.
+
+ У Chain INPUT загальна policy - ACCEPT, тому по інших інтерфейсах та з інших мереж не заборонено підключатись по SSH. Тому можемо явно не вказувати дозвіл на підключення з Client1.
+
+ Налаштовуємо iptables на Client1, щоб ping не проходив на адресу 172.17.49.1
+ Для цього в Chain INPUT додаємо правило:
+ 
+ ```console
+ sudo iptables -A INPUT -p icmp -d 172.17.49.1 -j DROP
+ ```
