@@ -272,7 +272,7 @@ sudo systemctl start ssh
 
  Налаштовуємо iptables на Client1, щоб ping не проходив на адресу 172.17.49.1
  Для цього в Chain INPUT додаємо правило:
- 
+
  ```console
  sudo iptables -A INPUT -p icmp -d 172.17.49.1 -j DROP
  ```
@@ -280,5 +280,6 @@ sudo systemctl start ssh
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Point_7/Point%207.png">
 </p>
+ 
  
  
