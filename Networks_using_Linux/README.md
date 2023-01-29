@@ -223,6 +223,7 @@ sudo systemctl start ssh
  ```
 
 
+
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
 </p>
