@@ -228,6 +228,28 @@ sudo systemctl start ssh
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
 </p>
 
+ На Client1 генеруємо приватний та публічний ключ key1 та key1.pub. Використовуємо ці ключи як для з'єднання з Server1 так і з Client1.
+ Копіюємо key1.pub на Server1 та Client2.
+ Редагуємо конфігураційний файл "/etc/ssh/sshd_config". Дозволяємо аутентифікацію за публічним ключем та вимикаємо аутентифікацію за паролем на Server1, Client2.
+ Перезапускаємо ssh.service на Server1 та Client2.
+ Підключаємось з Client1 до Server1 та Client2 за допомогою публічного ключа. 
+ 
+ ```console
+ ssh-keygen
+
+ ssh-copy-id -i key1.pub kostia@10.82.29.1 # copy public key from Client1 to Server1
+
+ ssh-copy-id -i key1.pub kostia@172.16.29.2 # copy public key from Client1 to Client2
+
+ ssh -i key1 kostia@10.82.29.1 # connection via ssh from Client1 to Server1
+
+ ssh -i key1 kostia@172.16.29.2 # connection via ssh from Client1 to Client2
+ ```
+ Аналогічні операції проводимо для підключення з Client2 до Server1 та Client1. За допомогою сгенерованого key2 та key2.pub.
+
+ В конфігураційних файлах, порт для з'єднання по SSH та інші налаштування залишаємо за замовчуванням. Але в реальній ситуації, звичайно, треба дбати про безпеку та змінювати порти та інші налаштування. 
+
+
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-2.png">
 </p>
