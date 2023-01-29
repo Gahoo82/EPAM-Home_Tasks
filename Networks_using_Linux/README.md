@@ -205,6 +205,7 @@ sudo apt install openssh-server #Ubuntu - Client1
 sudo yum –y install openssh-server #CentOS - Client2
 ```
 
+
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
 </p>
