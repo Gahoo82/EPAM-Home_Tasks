@@ -126,7 +126,7 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client2_ip_addr.png">
 </p>
 
-3. За допомогою команд ping та traceroute перевіряємо зв'язок між віртуальними машинами. 
+ #### 3. За допомогою команд ping та traceroute перевіряємо зв'язок між віртуальними машинами. 
 Налаштовуємо статичну маршрутизацію на роутері для мереж Net2 та Net3. 
 
 <p align="center">
@@ -137,7 +137,7 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Traceroute_8888.png">
 </p>
 
-#### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute. 
+ #### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute. 
 
 Таким чином маємо такі адреси: 
 172.17.39.1/24
@@ -193,4 +193,18 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/rezult_summary_ip_traceroute.png">
+</p>
+
+ #### 6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.
+ 
+ <p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-2.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-3.png">
 </p>
