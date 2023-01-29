@@ -47,7 +47,7 @@ __Client_1 та Client_2__ \
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/network_linux/Networks_using_Linux/Docs/Table%20network.png">
 </p>
 
-#### 1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.
+### 1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.
 Приховуємо файл дефолтних налаштувань шляхом зміни назви та створюємо новий файл налаштувань
 ```console
 kostia@Server1:/etc/netplan$ ls -l
@@ -62,7 +62,7 @@ kostia@Server1:/etc/netplan$ sudo nano server1-config.yaml
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/1_Static_IP_all_interfaces_netplan.png">
 </p>
 
-#### 2. На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1, Client_1 та Client_2
+### 2. На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1, Client_1 та Client_2
 Налаштовуємо файл "isc-dhcp-server"
 ```console
 sudo nano /etc/default/isc-dhcp-server
@@ -126,7 +126,7 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Client2_ip_addr.png">
 </p>
 
- #### 3. За допомогою команд ping та traceroute перевіряємо зв'язок між віртуальними машинами. 
+ ### 3. За допомогою команд ping та traceroute перевіряємо зв'язок між віртуальними машинами. 
 Налаштовуємо статичну маршрутизацію на роутері для мереж Net2 та Net3. 
 
 <p align="center">
@@ -137,7 +137,7 @@ sudo systemctl restart network
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Traceroute_8888.png">
 </p>
 
- #### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute. 
+ ### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute. 
 
 Таким чином маємо такі адреси: 
 172.17.39.1/24
@@ -183,7 +183,7 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/lo_traceroute.png">
 </p>
  
- #### 5. Розрахувати спільну адресу та маску (summarizing) адрес 172.17.D+10.1 та 172.17.D+20.1, при чому префікс має бути максимально можливим. Видалити маршрути, встановлені на попередньому кроці та замінити їх об’єднаним маршрутом, якій має проходити через Server_1. 
+ ### 5. Розрахувати спільну адресу та маску (summarizing) адрес 172.17.D+10.1 та 172.17.D+20.1, при чому префікс має бути максимально можливим. Видалити маршрути, встановлені на попередньому кроці та замінити їх об’єднаним маршрутом, якій має проходити через Server_1. 
  
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/Summary_IP_addr.png">
@@ -195,7 +195,7 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/rezult_summary_ip_traceroute.png">
 </p>
 
- #### 6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.
+ ### 6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.
  
  Перевіряємо чи встановлений SSH-сервер на Server1, Client1, Client2. Якщо ні - то встановлюємо.
  ```console
@@ -258,6 +258,6 @@ sudo systemctl start ssh
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-3.png">
 </p>
 
- #### 7. Налаштуйте на Server_1 firewall таким чином:
- ### - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2 
- ### - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
+ ### 7. Налаштуйте на Server_1 firewall таким чином:
+ #### - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2 
+ #### - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
