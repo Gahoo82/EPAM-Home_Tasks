@@ -197,6 +197,14 @@ sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 
  #### 6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.
  
+ Перевіряємо чи встановлений SSH-сервер на Server1, Client1, Client2. Якщо ні - то встановлюємо.
+ ```console
+ssh -V
+sudo apt install openssh-server #Ubuntu - Client1
+# або
+sudo yum –y install openssh-server #CentOS - Client2
+```
+
  <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-1.png">
 </p>
