@@ -257,3 +257,7 @@ sudo systemctl start ssh
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Networks_using_Linux/Docs/SSH/ssh-3.png">
 </p>
+
+ #### 7. Налаштуйте на Server_1 firewall таким чином:
+ #### - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2 
+ #### - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
