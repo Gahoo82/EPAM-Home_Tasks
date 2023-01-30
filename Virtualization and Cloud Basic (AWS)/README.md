@@ -40,7 +40,11 @@ __[Amazon EC2 backup and recovery with snapshots and AMIs](https://docs.aws.amaz
 [Make an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/9-point-1.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/9-point-2.png">
 </p>
 
 
