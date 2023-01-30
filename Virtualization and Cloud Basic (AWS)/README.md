@@ -72,6 +72,7 @@ umount /dev/xvdf
 </p>
 
 #### 10. Launch the second instance from backup.
+#### 11. Detach Disk_D from the 1st instance and attach  disk_D to the new instance.
 
 __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)
 
@@ -83,4 +84,6 @@ __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/10-2-point.png">
 </p>
 
-
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/11-1-point.png">
+</p>
