@@ -35,3 +35,12 @@ __[Amazon EC2 backup and recovery with snapshots and AMIs](https://docs.aws.amaz
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/8-point-Snapshot.png">
 </p>
 
+#### 9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.
+
+[Make an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
+
+<p align="center">
+  <img src="">
+</p>
+
+
