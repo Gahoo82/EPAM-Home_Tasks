@@ -47,10 +47,10 @@ lsblk
 sudo mkfs -t ext4 /dev/xvdf
 
 # Create a directory of your choice to mount our new ext4 volume.
-sudo mkdir /mnt/Disc_D
+sudo mkdir /mnt/Disk_D
 
 # Mount the volume to “Disc_D” directory using the following command.
-sudo mount /dev/xvdf /mnt/Disc_D
+sudo mount /dev/xvdf /mnt/Disk_D
 
 # Check the disk space to validate the volume mount.
 df -h
