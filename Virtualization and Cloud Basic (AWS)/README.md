@@ -24,3 +24,10 @@ AWS Cloud Basic
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/7-point.png">
 </p>
 
+#### 8. Create a snapshot of  your instance to keep as a backup.
+__[Amazon EC2 backup and recovery with snapshots and AMIs](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/ec2-backup.html)__
+
+<p align="center">
+  <img src="">
+</p>
+
