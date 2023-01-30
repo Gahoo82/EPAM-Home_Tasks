@@ -75,27 +75,12 @@ umount /dev/xvdf
 
 __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/restore.html)
 
-> Follow these steps to restore a volume to an earlier point-in-time backup by using the console:
-> - On the Amazon EC2 console, on the Elastic Block Store menu, choose Snapshots.
-> - Search for the snapshot that you want to restore, and select it.
-> - Choose Actions, and then choose Create Volume.
-> - Create the new volume in the same Availability Zone as your EC2 instance.
-> - On the Amazon EC2 console, select the instance.
-> - In the instance details, make note of the device name that you want to replace in the Root device entry or Block Devices entries.
-> - Attach the volume. The process differs for root volumes and non-root volumes.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/10-1-point.png">
 </p>
 
-> For root volumes:
-> - Stop the EC2 instance.
-> - On the EC2 Elastic Block Store Volumes menu, select the root volume that you want to replace.
-> - Choose Actions, and then choose Detach Volume.
-> - On the EC2 Elastic Block Store Volumes menu, select the new volume.
-> - Choose Actions, and then choose Attach Volume.
-> - Select the instance that you want to attach the volume to, and use the same device name that you noted earlier.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/10-2-point.png">
 </p>
 
 
