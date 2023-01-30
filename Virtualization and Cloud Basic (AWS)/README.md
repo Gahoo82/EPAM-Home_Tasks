@@ -39,6 +39,30 @@ __[Amazon EC2 backup and recovery with snapshots and AMIs](https://docs.aws.amaz
 
 [Make an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
+```console
+# Login to your ec2 instance and list the available disks using the following command.
+lsblk
+
+# Format the volume to the ext4 filesystem using the following command.
+sudo mkfs -t ext4 /dev/xvdf
+
+# Create a directory of your choice to mount our new ext4 volume.
+sudo mkdir /mnt/Disc_D
+
+# Mount the volume to “Disc_D” directory using the following command.
+sudo mount /dev/xvdf /mnt/Disc_D
+
+# Check the disk space to validate the volume mount.
+df -h
+
+# Create file on Disk_D
+sudo sh -c "echo EPAM University Programs - AWS > /mnt/Disk_D/file2.txt"
+cat /mnt/Disk_D/file2.txt
+
+# To unmount the volume, use the unmount command as shown below..
+umount /dev/xvdf
+```
+
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/9-point-1.png">
 </p>
