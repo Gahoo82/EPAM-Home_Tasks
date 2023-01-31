@@ -129,3 +129,9 @@ upload: Downloads\key1.pem to s3://bucket-1208/key1.pem
 <p align="center">
   <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/15-point.png">
 </p>
+
+### 16. Review the 10-minute[  example  ](https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/?nc1=h_ls)Deploy Docker Containers on Amazon Elastic Container Service (Amazon  ECS).  Repeat,  create  a  cluster,  and  run  the  online  demo  application  or  better  other application with custom settings.
+
+<p align="center">
+  <img src="">
+</p>
