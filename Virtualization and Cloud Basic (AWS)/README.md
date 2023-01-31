@@ -12,7 +12,7 @@ AWS Cloud Basic
 #### 5. Register and pass free courses  on[  AWS Skillbuilder](https://explore.skillbuilder.aws/learn). AWS Cloud  Practitioner Essentials: Core Services, AWS Cloud  Practitioner Essentials: Cloud Concepts. Try AWS Cloud  Quest: Cloud Practitioner. 
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/skillbuilder.png">
 </p>
 
 #### 6. Pass free courses on[  Amazon  qwiklabs ](https://amazon.qwiklabs.com/)
