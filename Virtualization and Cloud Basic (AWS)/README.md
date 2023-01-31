@@ -135,7 +135,7 @@ upload: Downloads\key1.pem to s3://bucket-1208/key1.pem
 ========= НЕ ВИЙШЛО, БУЛО ОБМАЛЬ ЧАСУ =======================================
 
 <p align="center">
-  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/16-point.png">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/16-5-point.png">
 </p>
 
 #### 17. [Run a Serverless "Hello, World!"  ](https://aws.amazon.com/getting-started/hands-on/run-serverless-code/?nc1=h_ls)with  AWS Lambda.
