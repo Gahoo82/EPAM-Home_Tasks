@@ -107,13 +107,6 @@ __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/
 
 #### 15. Review  the  10-minute[  example  ](https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls)Batch  upload  files  to  the  cloud  to  Amazon  S3  using  the  AWS  CLI. Create a user AWS  IAM, configure CLI AWS and upload any files  to S3.
 
-15.1. Create an AWS IAM User.
-<p align="center">
-  <img src="">
-</p>
-
-15.2. Using the AWS CLI with Amazon S3
-
 ```console
 Windows PowerShell
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
@@ -133,3 +126,7 @@ PS C:\Users\123> aws s3 cp "C:\Users\123\Downloads\key1.pem" s3://bucket-1208
 upload: Downloads\key1.pem to s3://bucket-1208/key1.pem
 PS C:\Users\123> dir aws s3://bucket-1208
 ```
+
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/15-point.png">
+</p>
