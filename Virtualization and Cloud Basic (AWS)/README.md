@@ -115,7 +115,7 @@ Windows PowerShell
 
 PS C:\Users\123> aws configure
 AWS Access Key ID [****************UUT7]: AKIA3FAAE7NGRLNT4ARM
-AWS Secret Access Key [****************VQzv]: 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
+AWS Secret Access Key [****************VQzv]: uHFpjr4eNEt+m1FUfmMwMojF**************
 Default region name [eu-central-1]: eu-central-1
 Default output format [json]: json
 PS C:\Users\123> aws s3 mb s3://bucket-1208
