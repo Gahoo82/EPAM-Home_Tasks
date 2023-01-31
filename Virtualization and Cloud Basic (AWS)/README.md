@@ -124,7 +124,6 @@ PS C:\Users\123> aws s3 cp "C:\Users\123\Downloads\TaskAWS_updated_links.pdf" s3
 upload: Downloads\TaskAWS_updated_links.pdf to s3://bucket-1208/TaskAWS_updated_links.pdf
 PS C:\Users\123> aws s3 cp "C:\Users\123\Downloads\key1.pem" s3://bucket-1208
 upload: Downloads\key1.pem to s3://bucket-1208/key1.pem
-PS C:\Users\123> dir aws s3://bucket-1208
 ```
 
 <p align="center">
