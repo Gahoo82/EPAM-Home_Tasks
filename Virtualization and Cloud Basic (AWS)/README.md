@@ -114,8 +114,8 @@ Windows PowerShell
 Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
 
 PS C:\Users\123> aws configure
-AWS Access Key ID [****************UUT7]: AKIA3FAAE7NGRLNT4ARM
-AWS Secret Access Key [****************VQzv]: uHFpjr4eNEt+m1FUfmMwMojF**************
+AWS Access Key ID [****************UUT7]: ******************
+AWS Secret Access Key [****************VQzv]: **************
 Default region name [eu-central-1]: eu-central-1
 Default output format [json]: json
 PS C:\Users\123> aws s3 mb s3://bucket-1208
