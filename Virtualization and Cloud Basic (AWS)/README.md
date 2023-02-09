@@ -92,7 +92,9 @@ __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/
 
 #### 12. Review the 10-minute [example.](https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls) Explore the possibilities of creating your own domain and domain  name  for  your  site.  Note,  that  Route  53  not  free  service. Alternatively  you  can  free register the  domain name *.PP.UA and use it.
 
-====== НЕ ВСТИГ ЗАРЕЄСТРУВАТИ ДОМЕННЕ ІМ'Я НА *.PP.UA ============================================================================
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/12-final.png">
+</p>
 
 #### 13. Launch and configure a WordPress instance with Amazon Lightsail[  link  ](https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/?trk=gs_card)
 
