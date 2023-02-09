@@ -98,8 +98,13 @@ __[Restoring from an Amazon EBS snapshot or an AMI](https://docs.aws.amazon.com/
 
 #### 13. Launch and configure a WordPress instance with Amazon Lightsail[  link  ](https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/?trk=gs_card)
 
-====== НЕ ВСТИГ ============================================================================
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/13-final.png">
+</p>
 
+<p align="center">
+  <img src="https://github.com/Gahoo82/EPAM-Home_Tasks/blob/main/Virtualization%20and%20Cloud%20Basic%20(AWS)/Docs/13-2-final.png">
+</p>
 
 #### 14. Review the 10-minute[  Store and Retrieve a File.](https://aws.amazon.com/getting-started/hands-on/backup-files-to-amazon-s3/) Repeat, creating your own repository.
 
